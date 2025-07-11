@@ -127,11 +127,14 @@ namespace LinqExercise
 
             var newEmployeeList = employees
                 .Append( new Employee("Michael", "Rose", 45, 12)) 
-                .ToList(); 
+                .ToList();
 
+            Console.WriteLine(); 
 
-            Console.WriteLine();
-
+            foreach (var worker in newEmployeeList)
+            {
+                Console.WriteLine($"Most recent list of employees: {worker.FirstName} {worker.LastName}, {worker.Age} & {worker.YearsOfExperience}");
+            }
             Console.ReadLine();
         }
 
